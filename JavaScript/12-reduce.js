@@ -41,3 +41,37 @@ const frase = palavras.reduce(
 )
 
 console.log(frase)
+
+// ====================================
+
+const pessoas = [
+    { nome: 'Ana', grupo: 'A'},
+    { nome: 'Carlos', grupo: 'B'},
+    { nome: 'José', grupo: 'B'},
+    { nome: 'Tatiane', grupo: 'A'}
+]
+
+const agrupado = pessoas.reduce(
+    (ac, pessoa) => {
+        if(!ac[pessoa.grupo]){
+            ac[pessoa.grupo] = []
+        }
+        ac[pessoa.grupo].push(pessoa.nome)
+        return ac
+    },{}
+)
+
+console.log(agrupado)
+
+// ====================================
+
+const letras =["a", "b", "a", "c", "b", "a"]
+
+const contagem = letras.reduce(
+    (ac, x) => {
+        ac[x] = (ac[x] || 0) + 1;
+        return ac
+    }, {}
+)
+
+console.log(contagem)
