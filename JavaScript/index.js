@@ -21,3 +21,9 @@ const altera = document.getElementById("altera")
 altera.addEventListener('click', function(){
     document.getElementById('texto2').innerText = "Texto Alterado"
 })
+
+const alteraCor = document.getElementById("alteraCor")
+
+alteraCor.addEventListener('click', function(){
+    document.getElementById('texto2').style.color = "blue"
+})
